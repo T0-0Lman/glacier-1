@@ -532,21 +532,27 @@
 
 //递归求 N 的阶乘
 import java.util.Scanner;
-public class Daily_Pra {
-    public static int func(int n){
-        if(n == 1){
-            return 1;
-        }else {
-            return n*func(n-1);
-        }
-    }
+//public class Daily_Pra {
+//    public static int func(int n){
+//        if(n == 1){
+//            return 1;
+//        }else {
+//            return n*func(n-1);
+//        }
+//    }
 
+//    public static void main(String[] args) {
+//        int sum = 0;
+//        System.out.print("请输入所求阶乘的数值：");
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//        int ret = func(n);
+//        System.out.println(n+"！的值为："+ret);
+//    }
+//}
+
+public class Daily_Pra {
     public static void main(String[] args) {
-        int sum = 0;
-        System.out.print("请输入所求阶乘的数值：");
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int ret = func(n);
-        System.out.println(n+"！的值为："+ret);
+        System.out.println("Hello World!");
     }
 }
