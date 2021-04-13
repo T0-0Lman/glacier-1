@@ -531,6 +531,7 @@
 //}
 
 //递归求 N 的阶乘
+import java.util.Arrays;
 import java.util.Scanner;
 //public class Daily_Pra {
 //    public static int func(int n){
@@ -551,8 +552,82 @@ import java.util.Scanner;
 //    }
 //}
 
-public class Daily_Pra {
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-}
+//求数组的平均值，实现一个方法 avg, 以数组为参数, 求数组中所有元素的平均值(注意方法的返回值类型).
+//public class Daily_Pra {
+//    public static double avg(int[] arr){
+//        int sum = 0;
+//        for(int x : arr) {
+//            sum += x;
+//        }
+//        return (double)sum/arr.length;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
+//        double ret = avg(arr);
+//        System.out.println("该数组的平均值为："+ret);
+//    }
+//}
+
+//数组所有元素之和，实现一个方法 sum, 以数组为参数, 求数组所有元素之和.
+//public class Daily_Pra {
+//    public static int sum(int[] arr){
+//        int result = 0;
+//        for(int x : arr){
+//            result += x;
+//        }
+//        return result;
+//    }
+//    public static void main(String[] args) {
+//        int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
+//        int ret = sum(arr);
+//        System.out.println("该数组所求和为："+ret);
+//    }
+//}
+
+//打印数组，实现一个方法 printArray, 以数组为参数, 循环访问数组中的每个元素, 打印每个元素的值.
+//public class Daily_Pra {
+//    public static void printArray(int[] arr){
+//        for(int i = 0;i < arr.length; i++){
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//    public static void main(String[] args) {
+//        int[] arr = new int[]{1,2,3,4,5,6,7,8,9,10};
+//        printArray(arr);
+//    }
+//}
+
+//创建的数组,并且赋初始值,创建一个 int 类型的数组, 元素个数为 100, 并把每个元素依次设置为 1 - 100
+import java.util.Arrays;
+//public class Daily_Pra {
+//    public static int[] func(int[] arr){
+//        int i = 0;
+//        for(i = 0;i < arr.length; i++){
+//                arr[i] = i + 1;
+//            }
+//        return arr;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = new int[100];
+//        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(func(arr)));
+//    }
+//}
+
+//改变原有数组元素的值,实现一个方法 transform, 以数组为参数, 循环将数组中的每个元素乘以 2 , 并设置到对应的数组元素上. 例如 原数组为 {1, 2, 3}, 修改之后为 {2, 4, 6}
+//public class Daily_Pra {
+//    public static int[] transform(int[] arr){
+//        for(int i = 0;i < arr.length;i++){
+//            arr[i] = arr[i]*2;
+//        }
+//        return arr;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = new int[]{1,2,3};
+//        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(transform(arr)));
+//    }
+//}
