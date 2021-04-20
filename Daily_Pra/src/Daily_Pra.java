@@ -600,6 +600,7 @@ import java.util.Scanner;
 
 //创建的数组,并且赋初始值,创建一个 int 类型的数组, 元素个数为 100, 并把每个元素依次设置为 1 - 100
 import java.util.Arrays;
+import java.util.function.BinaryOperator;
 //public class Daily_Pra {
 //    public static int[] func(int[] arr){
 //        int i = 0;
@@ -629,5 +630,148 @@ import java.util.Arrays;
 //        int[] arr = new int[]{1,2,3};
 //        System.out.println(Arrays.toString(arr));
 //        System.out.println(Arrays.toString(transform(arr)));
+//    }
+//}
+
+//toSting 模拟
+//public class Daily_Pra {
+//    public static String MyToString(int[] array){
+//        if(array == null) return "null";
+//        String ret="[";
+//        for(int i = 0;i <array.length;i++){
+//                ret = ret+ array[i];
+//            if(i != array.length - 1){
+//                ret += ret +",";
+//            }
+//        }
+//        ret = ret +  "]";
+//        return ret;
+//    }
+//    public static void main(String[] args) {
+//        //int[] array = new int[]{};
+//        int[] array = null;
+//        System.out.println( MyToString(array));
+//    }
+//}
+
+//数组是否有序，给定一个整型数组, 判定数组是否有序（递增）
+//public class Daily_Pra {
+//    public static boolean isSort(int[] arr){
+//        if(arr == null){
+//            return false;
+//        }
+//        for(int i = 0;i < arr.length -1; i++){
+//            if(arr[i]>arr[i+1]){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//
+//    public static void main(String[] args){
+//        int[] arr1 = new int[]{1,2,3,4,5,6,7,8,9,10};
+//        //int[] arr2 = null;
+//        System.out.println(isSort(arr1));
+//    }
+//}
+
+//二分查找,给定一个有序整型数组, 实现二分查找
+//public class Daily_Pra {
+//    public static  int MyBinarySearch(int[] arr,int key){
+//        int start = 0;
+//        int end = arr.length - 1;
+//        int mid = start + (end - start)/2 ;
+//        while(start <= end){
+//            if(arr[mid] == key){
+//                return mid;
+//            }else if(arr[mid] > key){
+//                end = mid - 1;
+//            }else {
+//                start = mid + 1;
+//            }
+//        }
+//        return -1;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = {1,2,3,4,5,6,7,8,9,10};
+//        System.out.println(MyBinarySearch(arr,2));
+//    }
+//}
+
+//public class Daily_Pra {
+//    public static int binarySearch(int[] arr, int key) {
+//        int start = 0;
+//        int end = arr.length - 1;
+//
+//        while(start <= end) {
+//            int mid = start + (end-start) / 2;
+//
+//            if (arr[mid] == key) {
+//                return mid;
+//            }
+//
+//            if (key > arr[mid]) {
+//                start = mid + 1;
+//            }
+//
+//            if (key < arr[mid]) {
+//                end = mid - 1;
+//            }
+//        }
+//        return -1;
+//    }
+//
+//    public  static void main(String[] args) {
+//        int[ ] arr = {3,2,5,6,8,1,4,7,9,10};
+//        int key1 = 6;
+//        Arrays.sort(arr);
+//        System.out.println(Arrays.toString(arr));
+//        System.out.println(key1+"元素的索引："+binarySearch(arr,6));
+//        System.out.println("========================");
+//        int key2 = 11;
+//        System.out.println(key2+"元素的索引："+binarySearch(arr,11));
+//    }
+//}
+
+//数组的拷贝,实现一个方法 copyOf, 对一个整型数组进行拷贝, 得到一个新的数组.
+//public class Daily_Pra {
+//    public static int[] copyOf(int[] arr){
+//        int[] arr2 = new int[arr.length];
+//        for(int i = 0; i < arr.length;i++){
+//            arr2[i] = arr[i];
+//        }
+//        return arr2;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = {1,2,3,4,5,6,7,8,9,10};
+//        System.out.println(Arrays.toString(arr));
+//        System.out.println("========拷贝数组========");
+//        System.out.println(Arrays.toString(copyOf(arr)));
+//    }
+//}
+
+//数组转字符串，实现一个方法 toString,把一个整型数组转换成字符串. 例如数组{1, 2, 3},返回的字符串为"[1, 2, 3]",注意逗号的位置和数量.
+//public  class Daily_Pra {
+//    public static String toString(int[] arr){
+//        String str ="";
+//        if(arr == null){
+//            return "null";
+//        }
+//        for(int i = 0;i<arr.length;i++){
+//            if(i == 0){
+//                str = "[";
+//            }else if(i<=arr.length - 1){
+//                str += arr[i] + ",";
+//            }
+//        }
+//            str += arr[arr.length - 1] + "]";
+//            return str;
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = {6,6,6,6,6,6,6,6};
+//        System.out.println(toString(arr));
 //    }
 //}
